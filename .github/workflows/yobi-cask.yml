@@ -1,0 +1,37 @@
+name: Test Yobi cask
+
+on:
+  push:
+    paths: ["Casks/yobi.rb"]
+  workflow_dispatch:
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, macos-15-intel]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Tap and audit
+        run: |
+          brew tap wellwells/tap
+          brew style --cask wellwells/tap/yobi
+          brew audit --cask --online wellwells/tap/yobi
+      - name: Install
+        run: brew install --cask wellwells/tap/yobi
+      - name: Check the installed app
+        run: |
+          test -d /Applications/Yobi.app
+          defaults read /Applications/Yobi.app/Contents/Info.plist CFBundleShortVersionString
+          if xattr -p com.apple.quarantine /Applications/Yobi.app 2>/dev/null; then
+            echo "::error::quarantine attribute is still set"; exit 1
+          fi
+      - name: Launch
+        run: |
+          open -a /Applications/Yobi.app
+          for i in $(seq 1 30); do pgrep -f "Yobi.app/Contents/MacOS/Yobi" && break; sleep 2; done
+          pgrep -f "Yobi.app/Contents/MacOS/Yobi" || { echo "::error::Yobi did not start"; exit 1; }
+          pkill -f "Yobi.app/Contents/MacOS/Yobi" || true
+      - name: Uninstall
+        run: brew uninstall --cask yobi
