@@ -13,4 +13,4 @@ brew install --cask wellwells/tap/yobi
 |---|---|
 | [yobi](https://github.com/WellWells/yobi) | AI automation for the desktop that needs no AI API key (macOS 13 or later) |
 
-Formulae and casks are updated automatically by each release.
+Each package is updated when it is released.
