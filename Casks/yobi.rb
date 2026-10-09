@@ -10,6 +10,8 @@ cask "yobi" do
   desc "AI automation for the desktop that needs no AI API key"
   homepage "https://github.com/WellWells/yobi"
 
+  depends_on :macos
+
   app "Yobi.app"
 
   # Yobi is not notarized; without this Gatekeeper blocks the first launch.
