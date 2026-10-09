@@ -10,7 +10,7 @@ cask "yobi" do
   desc "AI automation for the desktop that needs no AI API key"
   homepage "https://github.com/WellWells/yobi"
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Yobi.app"
 
