@@ -1,9 +1,9 @@
 cask "yobi" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.11.0"
-  sha256 arm:   "a3042c161977bab28d7bdc407dab7a6b8b90ac38eb6a493ca0de8309c3a7cd84",
-         intel: "9c9ada0cce8ae22ab2bf1e08facddd8dba9f54292cbf57719088998410f44ff8"
+  version "1.12.0"
+  sha256 arm:   "2e178e470037acd835316ffdf7ee5945e273b71d0f9e243e53799da3e4f83611",
+         intel: "46164bafd89c1714a40e6897480a255bd4d9d1756eaf85c654d55393fb6bb65d"
 
   url "https://github.com/WellWells/yobi/releases/download/v#{version}/Yobi-#{version}-mac-#{arch}.dmg"
   name "Yobi"
