@@ -1,30 +1,30 @@
 class Agentswap < Formula
   desc "Switch between multiple accounts of AI coding agents"
   homepage "https://github.com/WellWells/agentswap"
-  version "1.2.1"
+  version "1.2.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/WellWells/agentswap/releases/download/v1.2.1/agentswap_darwin_arm64.tar.gz"
-      sha256 "3032904bb06e791791c0cdda4f1dcd0a5ba369e3039f50fd578a57db626b4310"
+      url "https://github.com/WellWells/agentswap/releases/download/v1.2.2/agentswap_darwin_arm64.tar.gz"
+      sha256 "e51dd2665f87015656e6d28ca2605a701cb978f8f15659f921d429b49c6784a2"
     end
 
     on_intel do
-      url "https://github.com/WellWells/agentswap/releases/download/v1.2.1/agentswap_darwin_amd64.tar.gz"
-      sha256 "c6f7f0a22178d21f8b78ad5603106984e56347b6ae1cf7404e833d7c143df208"
+      url "https://github.com/WellWells/agentswap/releases/download/v1.2.2/agentswap_darwin_amd64.tar.gz"
+      sha256 "231bf1c4578d75a1ac454796b66d3912876df73427a49c99ae8d8fb2ead3c361"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/WellWells/agentswap/releases/download/v1.2.1/agentswap_linux_arm64.tar.gz"
-      sha256 "9544a8db1962cfcd425e6dffe93f740910d579e0001425654f43bf3db64385cc"
+      url "https://github.com/WellWells/agentswap/releases/download/v1.2.2/agentswap_linux_arm64.tar.gz"
+      sha256 "c3937211f914cb904ba40d46f8ce638e1778a9833db8a8d5c386b60515036878"
     end
 
     on_intel do
-      url "https://github.com/WellWells/agentswap/releases/download/v1.2.1/agentswap_linux_amd64.tar.gz"
-      sha256 "1a632710b9f114344b144b5bf5510ed6786e564c245cd338c974321f12eda0d4"
+      url "https://github.com/WellWells/agentswap/releases/download/v1.2.2/agentswap_linux_amd64.tar.gz"
+      sha256 "39feab24c92eff4f468168d7fed42ec0fddd15200bc8ba01e3aba3b4639eb7e0"
     end
   end
 
